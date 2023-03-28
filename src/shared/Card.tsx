@@ -1,4 +1,6 @@
 import React, { FC } from 'react';
-import { Box, BoxProps } from '@chakra-ui/react';
+import { Card as ChakraCard, CardProps } from '@chakra-ui/react';
 
-export const Card: FC<BoxProps> = (props) => <Box borderWidth={1} rounded="sm" bg="white" p={4} {...props} />;
+export const Card: FC<CardProps> = (props) => (
+  <ChakraCard bg='white' p={4} borderRadius='20px' {...props} />
+);

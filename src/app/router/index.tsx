@@ -17,7 +17,10 @@ const Router = () => (
         <Route path={Path.FORGOT} element={<ForgotPassword />} />
       </Route>
 
-      <Route path={Path.MAIN} element={<Main />} />
+      <Route path={Path.MAIN} element={<Main />}>
+        
+      </Route>
+
       <Route path='*' element={<NotFound />} />
     </Routes>
   </BrowserRouter>

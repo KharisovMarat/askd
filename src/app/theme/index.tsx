@@ -8,9 +8,9 @@ const layerStyles = {
 const breakpoints = createBreakpoints({
   sm: '320px',
   md: '940px',
-  lg: '1024px',
-  xl: '1280px',
-  '2xl': '1920px',
+  lg: '1280px',
+  xl: '1920px',
+  '2xl': '3840px',
 });
 
 const zIndices = {
