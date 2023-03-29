@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { NotFound } from 'modules/notFound';
-import { Main } from 'modules/main';
+import { NotFound } from 'pages/NotFoundPage';
+import { Main } from 'entities/main';
 import { Path } from 'app/constants/routerPaths';
-import { Auth, AuthSupport, ForgotPassword } from 'modules/auth';
+import { Auth, AuthSupport, ForgotPassword } from 'entities/auth';
 
 const AuthPage = React.lazy(() => import('pages/AuthPage'));
 

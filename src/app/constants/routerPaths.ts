@@ -6,5 +6,6 @@ export enum Path {
   REGISTRATION = '/auth/registration',
 
   SUPPORT = '/support',
-  MAIN = '/main',
+  MAIN = '/askd',
+  MONITORING = '/askd/monitoring'
 }
