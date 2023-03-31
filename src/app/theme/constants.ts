@@ -1,0 +1,1 @@
+export const border = '1px solid rgba(11, 31, 51, 0.16)';

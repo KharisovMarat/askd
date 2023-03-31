@@ -9,7 +9,7 @@ import PhotoReports from '../entities/PhotoReports';
 
 
 const AuthPage = observer(() => {
-  const [isSecondBg, setIsSecondBg] = useState<boolean>(true);
+  const [isSecondBg, setIsSecondBg] = useState<boolean>(false);
 
   const secondBgPropertyes: StyleProps = {
     backgroundBlendMode: isSecondBg ? 'screen' : 'normal',

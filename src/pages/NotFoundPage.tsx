@@ -13,4 +13,4 @@ const NotFound = () => (
     </Card>
   )
 
-export { NotFound }
+export default NotFound

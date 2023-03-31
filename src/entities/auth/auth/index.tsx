@@ -43,7 +43,7 @@ const Auth = () => {
       <Stack>
         <LogoIcon />
         <Text lineHeight='shorter' fontSize={12} fontWeight='semibold' color='black'>
-          Автоматизированная система
+          Аналитическая система
           <br /> контроля деятельности
         </Text>
       </Stack>
@@ -52,7 +52,7 @@ const Auth = () => {
         <Text fontSize='2xl' fontWeight='bold' lineHeight='shorter'>
           Добро пожаловать!
         </Text>
-        <Text fontWeight='thin'>Авторизуйтесь чтобы продолжить</Text>
+        <Text fontWeight='thin'>Авторизуйтесь, чтобы продолжить</Text>
       </Stack>
 
       <Stack pt={8} onSubmit={handleSubmit(onSubmit)}>
@@ -63,7 +63,7 @@ const Auth = () => {
             render={({ field, fieldState }) => (
               <FormControl isInvalid={fieldState.invalid}>
                 <FormLabel htmlFor='login'>Логин</FormLabel>
-                <Input placeholder='Введите логин' {...field} />
+                <Input placeholder='elizaveta.vasukova@askd.gov' {...field} />
                 <FormErrorMessage position='absolute'>{fieldState.error?.message}</FormErrorMessage>
               </FormControl>
             )}
@@ -76,7 +76,7 @@ const Auth = () => {
               <FormControl isInvalid={fieldState.invalid}>
                 <FormLabel htmlFor='pass'>Пароль</FormLabel>
                 <InputGroup>
-                  <Input placeholder='Введите пароль' type={passType} {...field} />
+                  <Input placeholder='•••••••••' type={passType} {...field} />
                   <InputRightElement children={<ViewIcon />} cursor='pointer' onClick={onChangePassType} />
                 </InputGroup>
                 <FormErrorMessage position='absolute'>{fieldState.error?.message}</FormErrorMessage>
