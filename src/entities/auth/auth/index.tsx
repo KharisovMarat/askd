@@ -44,7 +44,7 @@ const Auth = () => {
         <LogoIcon />
         <Text lineHeight='shorter' fontSize={12} fontWeight='semibold' color='black'>
           Аналитическая система
-          <br /> контроля деятельности
+          <br /> контрольной деятельности
         </Text>
       </Stack>
 
@@ -63,7 +63,7 @@ const Auth = () => {
             render={({ field, fieldState }) => (
               <FormControl isInvalid={fieldState.invalid}>
                 <FormLabel htmlFor='login'>Логин</FormLabel>
-                <Input placeholder='elizaveta.vasukova@askd.gov' {...field} />
+                <Input placeholder='SkavronskayaYA' {...field} />
                 <FormErrorMessage position='absolute'>{fieldState.error?.message}</FormErrorMessage>
               </FormControl>
             )}

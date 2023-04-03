@@ -15,15 +15,12 @@ export const Sidebar: FC<IProps> = (props) => {
 
   const handleOpen = () => setIsOpen(!isOpen);
 
-  const tr = 0;
   return (
     <Box
       {...wrapperStyle}
       width={isOpen ? '324px' : '48px'}
       transition='width 0.2s, left 0.2s'
       onClick={handleOpen}
-    >
-      {tr}
-    </Box>
+    ></Box>
   );
 };

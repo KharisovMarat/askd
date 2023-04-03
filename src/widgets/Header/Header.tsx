@@ -1,12 +1,16 @@
 import { Box, Flex } from '@chakra-ui/react';
-import React from 'react';
+import React, { FC } from 'react';
 import { Text, IconButton, Avatar } from 'shared';
 
 import { ReactComponent as LogoIcon } from 'assets/icons/logo.svg';
 import { ReactComponent as BellIcon } from 'assets/icons/bell.svg';
 import { WrapperStyle, TitleStyle } from './style';
 
-const AppHeader = () => (
+interface IProps {
+  val?: string;
+}
+
+export const Header: FC<IProps> = () => (
   <Flex {...WrapperStyle}>
     <Flex>
       <Flex alignItems='center'>
@@ -20,10 +24,8 @@ const AppHeader = () => (
     </Flex>
 
     <Flex>
-      <IconButton aria-label='bell' icon={<BellIcon />} bgColor='transparent'/>
-      <Avatar name='Marat Kharisov'/>
+      <IconButton aria-label='bell' icon={<BellIcon />} bgColor='transparent' />
+      <Avatar name='Marat Kharisov' />
     </Flex>
   </Flex>
 );
-
-export default AppHeader;
