@@ -7,6 +7,7 @@ import { Auth, AuthSupport, ForgotPassword } from '../../entities/auth';
 const AuthPage = React.lazy(() => import('pages/AuthPage'));
 const MainPage = React.lazy(() => import('pages/MainPage'));
 const NotFoundPage = React.lazy(() => import('pages/NotFoundPage'));
+const MonitoringPage = React.lazy(() => import('pages/MonitoringPage'));
 
 const Router = () => (
   <BrowserRouter>
@@ -18,7 +19,9 @@ const Router = () => (
           <Route path={Path.FORGOT} element={<ForgotPassword />} />
         </Route>
 
-        <Route path={Path.MAIN} element={<MainPage />}></Route>
+        <Route path={Path.MAIN} element={<MainPage />}>
+          <Route path={Path.MONITORING} element={<MonitoringPage />} />
+        </Route>
 
         <Route path='*' element={<NotFoundPage />} />
       </Routes>

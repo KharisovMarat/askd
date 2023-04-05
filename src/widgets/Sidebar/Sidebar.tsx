@@ -1,7 +1,8 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Flex, Grid } from '@chakra-ui/react';
 import React, { FC, useState } from 'react';
+import { Button, Text } from 'shared';
 
-import { wrapperStyle } from './style';
+import { wrapperStyle, menuItemStyle, menuWrapperStyle, selectedMenuStyle } from './style';
 
 interface IProps {
   items?: {
@@ -10,17 +11,36 @@ interface IProps {
   }[];
 }
 
-export const Sidebar: FC<IProps> = (props) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+const menuList = ['Мои задачи', 'Извещения', 'План-график', 'Избранное'];
 
-  const handleOpen = () => setIsOpen(!isOpen);
+export const Sidebar: FC<IProps> = (props) => {
+  const [selectedMenu, setSelectedMenu] = useState<string>(menuList[0]);
+
+  const isSelected = (value: string) => value === selectedMenu;
+
+  const getSelectedStyle = (value: string) => {
+    if (isSelected(value)) {
+      return selectedMenuStyle;
+    }
+    return {};
+  };
 
   return (
-    <Box
-      {...wrapperStyle}
-      width={isOpen ? '324px' : '48px'}
-      transition='width 0.2s, left 0.2s'
-      onClick={handleOpen}
-    ></Box>
+    <Box {...wrapperStyle}>
+      <Flex {...menuWrapperStyle}>
+        {menuList.map((item) => (
+          <Box
+            key={item}
+            {...getSelectedStyle(item)}
+            style={{ ...menuItemStyle }}
+            onClick={() => setSelectedMenu(item)}
+          >
+            <Text fontSize={16} fontWeight={600} color='black'>
+              {item}
+            </Text>
+          </Box>
+        ))}
+      </Flex>
+    </Box>
   );
 };

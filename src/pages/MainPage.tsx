@@ -1,17 +1,21 @@
-import { Box, StyleProps } from '@chakra-ui/react';
+import { Box, Flex, StyleProps } from '@chakra-ui/react';
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-import { Header } from 'widgets';
-import { Sidebar } from 'shared';
+import { Header, Footer, Sidebar } from 'widgets';
 
 const wrapperStyle: StyleProps = {
-  height: 'calc(100vh - 64px)',
+  height: '100vh',
 };
 
 const MainPage = () => (
   <Box {...wrapperStyle}>
     <Header />
-    <Sidebar />
+    <Flex>
+      <Sidebar />
+      <Outlet />
+    </Flex>
+    <Footer />
   </Box>
 );
 

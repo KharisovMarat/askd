@@ -27,9 +27,9 @@ const AuthPage = observer(() => {
         backgroundSize='cover'
         backgroundPosition='center'
         backgroundImage={`url(${BgIcon})`}
-        {...secondBgPropertyes}
+        // {...secondBgPropertyes}
       />
-      <Checkbox isChecked={isSecondBg} onChange={() => setIsSecondBg(!isSecondBg)} />
+      {/* <Checkbox isChecked={isSecondBg} onChange={() => setIsSecondBg(!isSecondBg)} /> */}
       <Snowfall radius={[0.5, 1.5]} />
       <Stack position='absolute' width='100%' top='50%' transform='translate(0%, -50%)'>
         <Card minHeight='80vh' maxWidth='70vh' ml='5%' p='55px'>
